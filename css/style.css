@@ -1,0 +1,471 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+/* codear apartir de aca, 320px first mobile */
+.body {
+  font-family: "roboto", sans-serif;
+  text-align: center;
+
+  background-color: #a0846e;
+  min-height: 100vh;
+  display: grid;
+  grid-template:
+    "header" 100px
+    "nav" auto
+    "main" auto
+    "footer" auto
+    / auto;
+}
+/* ---------------------------------------HEADER MOBILE---------------------------------- */
+.body__cabezera {
+  grid-area: header;
+  background-image: url(../imagenes/imagenes-encabezado/imagen-encabezado-mobile.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  object-fit: cover;
+  object-position: center;
+  display: flex;
+  align-items: center;
+}
+.body__cabezera__logo {
+  height: 60px;
+  width: 60px;
+  display: flex;
+  margin-left: 20px;
+}
+
+/* ------------------------------------------NAVEGADOR MOBILE------------------------------------------ */
+
+.nav-link:hover {
+  color: #ffffff !important;
+  transition: 1s;
+}
+.nav-link {
+  font-size: 18px !important;
+  padding: 10px !important;
+}
+/* ---------------------------------------------MAIN MOBILE--------------------------------------------- */
+.body__main {
+  grid-area: main;
+  display: grid;
+  grid-template:
+    "seccion1" auto
+    "seccion2" auto
+    / 80%;
+  justify-content: center;
+}
+/* ----------------------------------------SECCION 1 mobile---------------------------------------------------------------- */
+.body__main__seccion1 {
+  grid-area: seccion1;
+  border-color: #ffffff;
+  border-style: solid;
+  padding: 15px;
+  border-radius: 50px;
+  margin-bottom: 40px;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.body__main__seccion1__h {
+  font-family: "Roboto";
+  font-weight: 900;
+  font-size: 26px;
+  line-height: 30px;
+  color: #ffffff;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+/* ----------------------------------seccion 2 mobile de pagina index------------------------------------------- */
+
+.body__main__seccion2--productos {
+  grid-area: seccion2;
+  display: grid;
+  grid-template-columns: repeat(1fr);
+  grid-template-rows: repeat(auto, 1fr);
+  grid-row-gap: 20px;
+  grid-column-gap: 30px;
+  justify-content: center;
+}
+
+.body__main__seccion2--productos__article {
+  background: #e3d2ca;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 23px;
+  align-items: center;
+  text-align: center;
+  color: #a0846e;
+  width: 269px;
+  justify-content: center;
+}
+
+.body__main__seccion2--productos__article:hover {
+  transform: scale(1.2);
+  transition: 2s;
+}
+
+.body__main__seccion2--productos__article--texto {
+  padding: 10px;
+}
+
+/*------------------------------------seccion 2 mobile de pagina quienes somos-------------------------------------*/
+.body__main__seccion2--quienes {
+  grid-area: seccion2;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 4px 4px #e3d2ca;
+  border-radius: 103px;
+}
+
+.body__main__seccion2--quienes--text {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 23px;
+  text-align: center;
+  color: #ffffff;
+  margin: 40px;
+}
+
+/*------------------------------------seccion 2 mobile de pagina CONOCIENDONOS MAS...-------------------------------------*/
+
+.body__main__seccion2--conociendonos {
+  grid-area: seccion2;
+  display: grid;
+  justify-items: center;
+  align-items: flex-start;
+  grid-template-columns: 1fr;
+  grid-template-rows: 3fr;
+  grid-column-gap: 30px;
+  grid-row-gap: 20px;
+}
+
+.body__main__seccion2--conociendonos--article {
+  background: #e3d2ca;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+  align-items: center;
+  max-width: 300px;
+}
+
+/*------------------------------------seccion 2 mobile de pagina INFORMACION-------------------------------------*/
+
+.body__main__seccion2--informacion {
+  grid-area: seccion2;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, 1fr);
+  grid-row-gap: 30px;
+}
+
+.body__main__seccion2--informacion--article {
+  background: #e3d2ca;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+  width: 100%;
+  max-width: 400px;
+  justify-self: center;
+}
+
+/*------------------------------------seccion 2 mobile de pagina CONTACTO-------------------------------------*/
+
+.body__main__seccion2--contacto {
+  grid-area: seccion2;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 30px;
+}
+
+.body__main__seccion2--contacto--article {
+  background-color: #e3d2ca;
+  max-width: 400px;
+  width: 100%;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+  justify-self: center;
+}
+
+.body__main__seccion2--contacto--article--formulario {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, 1fr) 4fr repeat(2, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 10px;
+  justify-items: center;
+  margin: 20px;
+}
+
+.body__main__seccion2--contacto--article--formulario--input {
+  min-width: 100%;
+}
+
+.body__main__seccion2--contacto--article--formulario--botones {
+  min-width: 50%;
+}
+
+/* -------------------------------------------------------seccion 2 mobile de pagina "CARRITO" ------------{}------------------------------- */
+
+.body__main__seccion2--carrito {
+  grid-area: seccion2;
+  min-width: 100%;
+  border-radius: 50px;
+  margin-bottom: 31px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 4px 4px #e3d2ca;
+  border-radius: 103px;
+}
+
+.body__main__seccion2--carrito--p {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 38px;
+  text-align: center;
+  color: #ffffff;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  margin: 50px;
+}
+
+/* -------------------------------------------FOOTER MOBILE--------------------------------------------- */
+.body__footer {
+  grid-area: footer;
+  background-color: #e3d2ca;
+  margin-top: 41px;
+  display: flex;
+  flex-direction: column;
+}
+
+.body__footer__contenedor1 {
+  min-width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.body__footer__contenedor1--contactanos {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 30px;
+  text-align: center;
+  color: #ffffff;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.body__footer__contenedor1--gmail {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  text-align: center;
+  color: #ffffff;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.body__footer__contenedor2 {
+  min-width: 50%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.body__footer__contenedor2--seguinos {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 30px;
+  margin: 10px;
+  text-align: center;
+  color: #ffffff;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+/* ---------------------------------burbujas----------------------------------------------------------- */
+.burbuja {
+  border-radius: 50%;
+  /* background: #e3d2ca; */
+  background-image: url(../imagenes/imagen-de-css/logo100x100.png);
+  opacity: 0.3;
+
+  position: fixed;
+  bottom: 0;
+  z-index: -1;
+
+  animation: burbujas 3s linear infinite;
+}
+
+.burbuja:nth-child(1) {
+  width: 100px;
+  height: 100px;
+  left: 5%;
+  animation-duration: 3s;
+}
+
+.burbuja:nth-child(2) {
+  width: 100px;
+  height: 100px;
+  left: 35%;
+  animation-duration: 7s;
+}
+.burbuja:nth-child(3) {
+  width: 100px;
+  height: 100px;
+  left: 15%;
+  animation-duration: 9s;
+}
+.burbuja:nth-child(4) {
+  width: 100px;
+  height: 100px;
+  left: 80%;
+  animation-duration: 6s;
+}
+
+.burbuja:nth-child(5) {
+  width: 100px;
+  height: 100px;
+  left: 65%;
+  animation-duration: 4s;
+}
+@keyframes burbujas {
+  0% {
+    bottom: 0%;
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  100% {
+    bottom: 100vh;
+    opacity: 0.2;
+  }
+}
+
+/* -------------------------------para tablet -------------------------------------------------------------*/
+@media (min-width: 768px) {
+  /* -----------------------------SECCION 1 TABLET------------------------------- */
+  .body__main__seccion1__h {
+    font-family: "Roboto";
+    font-weight: 900;
+    font-size: 40px;
+    line-height: 40px;
+    color: #ffffff;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+
+  /* ------------------------------seccion 2 TABLET de pagina index------------------------------------------- */
+  .body__main__seccion2--productos {
+    grid-area: seccion2;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: space-between;
+  }
+
+  /* ------------------------------seccion 2 TABLET de pagina CONOCIENDONOS MAS------------------------------------------- */
+
+  .body__main__seccion2--conociendonos {
+    grid-area: seccion2;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: space-between;
+  }
+
+  /* -------------------------------------------------------seccion 2 TABLET de pagina "CARRITO" ------------{}------------------------------- */
+
+  .body__main__seccion2--carrito--p {
+    font-size: 32px;
+  }
+
+  /* -------------------------------------------FOOTER TABLET--------------------------------------------- */
+  .body__footer {
+    grid-area: footer;
+    display: flex;
+    flex-direction: row;
+  }
+  .body__footer__contenedor1--gmail {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 26px;
+    text-align: center;
+    color: #ffffff;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+}
+
+/* -----------------para escritorio 1024px ------------------------- */
+@media (min-width: 1024px) {
+  /* -----------------------------------------------BODY---------------------------------------------------------------------------- */
+  .body {
+    display: grid;
+    grid-template:
+      "header" 232px
+      "nav" 40px
+      "main" auto
+      "footer" 170px
+      / auto;
+  }
+  /* ---------------------------------------------HEADER--------------------------------------------------------------------- */
+  .body__cabezera {
+    background-image: url(../imagenes/imagen-de-css/imagen-encabezado.png);
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+  }
+
+  .body__cabezera__logo {
+    background-image: url(../imagenes/imagen-de-css/imagen-logo.png);
+    height: 138px;
+    width: 180px;
+    margin-left: 10%;
+  }
+  /* ------------------------------------------------NAVEGADOR--------------------------------------------------------------------- */
+
+  /* ------------------------------seccion 2 de pagina INFORMACION------------------------------------------- */
+  .body__main__seccion2--informacion {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 30px;
+  }
+
+  /* -------------------------------------------------------seccion 2 de pagina "contacto" ------------{}------------------------------- */
+  .body__main__seccion2--contacto {
+    grid-area: seccion2;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 15px;
+    grid-row-gap: 0px;
+  }
+
+  /* -------------------------------------------------------FOOTER----------------------------------------------------------- */
+
+  .body__footer__contenedor1--gmail {
+    font-size: 26px;
+  }
+}
